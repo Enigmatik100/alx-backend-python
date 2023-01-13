@@ -6,6 +6,11 @@ from typing import Sequence, Any, Union
 
 
 def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
+    """
+    take Sequence of any type element
+    :param lst:
+    :return: element of type any or None
+    """
     if lst:
         return lst[0]
     else:
