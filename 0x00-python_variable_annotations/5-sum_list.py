@@ -8,7 +8,8 @@ from typing import List
 
 def sum_list(input_list: List[float]) -> float:
     """
-    takes a list input_list of floats as argument and returns their sum as a float
+    takes a list input_list of floats as argument and returns
+    their sum as a float
     :param input_list:
     :return: sum of input_list elements
     """
