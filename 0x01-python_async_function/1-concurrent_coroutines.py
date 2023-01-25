@@ -18,7 +18,8 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     without using sort() because of concurrency.
     """
     delays = []
-    for res in asyncio.as_completed([wait_random(max_delay) for i in range(n)]):
+    for res in asyncio.as_completed([wait_random(max_delay)
+                                     for _ in range(n)]):
         completed_task = await res
         delays.append(completed_task)
 
