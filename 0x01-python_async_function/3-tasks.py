@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 """3. Tasks"""
-import asyncio
+from asyncio import Task, create_task
 
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-def task_wait_random(max_delay: int) -> asyncio.Task:
+def task_wait_random(max_delay: int) -> Task:
     """
     Write a function (do not create an async function,
     use the regular function syntax to do this)
     task_wait_randomthat takes an integer max_delay
     and returns a asyncio.Task.
     :param max_delay:
-    :return: asyncio.Task
+    :return: Task
     """
-    return asyncio.create_task(wait_random(max_delay))
+    task = create_task(wait_random(max_delay))
+    return task
