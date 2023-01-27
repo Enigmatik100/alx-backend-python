@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
 
-import math
+measure_time = __import__('2-measure_runtime').measure_time
 
-floor = __import__('2-floor').floor
+n = 5
+max_delay = 9
 
-ans = floor(3.14)
-
-print(ans == math.floor(3.14))
-print(floor.__annotations__)
-print("floor(3.14) returns {}, which is a {}".format(ans, type(ans)))
-
+print(measure_time(n, max_delay))
